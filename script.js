@@ -144,9 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playlistItems.forEach((li) => li.classList.remove('active'));
     item.classList.add('active');
 
-    audio.load();
-    audio.play().catch(() => {});
-    playBtn.textContent = '⏸';
+    if (progress) progress.value = 0;
   }
 
   // Воспроизведение/Пауза
