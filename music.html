@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>АльтМузыка – Музыка</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="index.html" class="logo">АльтМузыка</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="artists.html">Исполнители</a></li>
+          <li><a href="reviews.html">Обзоры</a></li>
+          <li><a href="music.html" class="active">Музыка</a></li>
+        </ul>
+        <div class="nav-auth">
+          <a href="auth.html">Войти</a>
+        </div>
+        <div class="burger" id="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>Музыка</h1>
+          <p>Слушайте треки ваших любимых артистов</p>
+        </div>
+      </section>
+      <section class="player-section">
+        <div class="player-card">
+          <!-- Обложка трека -->
+          <div class="track-cover">
+            <img id="track-cover-image" src="images/catsmusic.jpg" alt="Обложка трека" />
+          </div>
+
+          <!-- Информация о треке -->
+          <h3 id="current-title">Выберите трек</h3>
+          <p id="current-artist"></p>
+
+          <!-- Аудио плеер -->
+          <audio id="audio" src="tracks/dummy.wav"></audio>
+
+          <!-- Ползунок длительности -->
+          <div class="track-progress">
+            <input type="range" id="progress" value="0" min="0" max="100" />
+            <span id="track-duration">0:00</span> <!-- Длительность трека -->
+          </div>
+
+          <!-- Контролы для плеера -->
+          <div class="controls">
+            <button id="prev-btn" aria-label="Предыдущий трек">⏮</button>
+            <button id="play-btn" aria-label="Воспроизвести/Пауза">▶</button>
+            <button id="next-btn" aria-label="Следующий трек">⏭</button>
+          </div>
+
+          <!-- Ползунок громкости -->
+          <div class="audio-controls">
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1" class="volume-slider">
+          </div>
+        </div>
+        <div class="playlist">
+          <ul id="playlist">
+            <!-- Примерный плейлист, использующий наиболее заметные треки артистов. Вы можете заменить длительности на реальные, если знаете точные значения. -->
+            <li data-src="tracks/web 2.0 - тёмный принц, silver gloria.mp3" data-title="web 2.0" data-artist="тёмный принц + silver gloria" data-duration="1:24" data-cover="images/DarkThreads.png">
+              web 2.0 (❗)<span>1:24</span>
+            </li>
+            <li data-src="tracks/Стенки моего подъезда - CUPSIZE.mp3" data-title="Стенки моего подъезда" data-artist="CUPSIZE" data-duration="2:50" data-cover="images/PARTYCUPSIZE.png">
+              Стенки моего подъезда (❗)<span>2:50</span>
+            </li>
+            <li data-src="tracks/тёмный принц — цветы.mp3" data-title="цветы" data-artist="темный принц" data-duration="1:38" data-cover="images/DarkThreads.png">
+              цветы<span>1:38</span>
+            </li>
+            <li data-src="tracks/WENARO & LXNER — Лёд.mp3" data-title="Лёд" data-artist="LXNER" data-duration="3:05" data-cover="images/ice.jpg">
+              Лёд<span>3:05</span>
+            </li>
+            <li data-src="tracks/madk1d & тёмный принц — ты че обиделась.mp3" data-title="ты чё обиделась" data-artist="madk1d" data-duration="3:00" data-cover="images/sexyswag.png">
+              ты чё обиделась (❗)<span>3:00</span>
+            </li>
+            <li data-src="tracks/Sqwore — Аквариум.mp3" data-title="Аквариум" data-artist="sqwore" data-duration="2:40" = data-cover="images/aquariume.png">
+              Аквариум<span>2:40</span>
+            </li>
+            <li data-src="tracks/CUPSIZE — целую тебя.mp3" data-title="целую тебя" data-artist="CUPSIZE" data-duration="2:09" data-cover="images/kissyou.png">
+              целую тебя<span>2:09</span>
+            </li>
+            <li data-src="tracks/рэйчи & madk1d — Они все такие вау.mp3" data-title="Они все такие вау" data-artist="рэйчи" data-duration="2:26" data-cover="images/theyrwow.png">
+              Они все такие вау (❗)<span>2:26</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Плашка с предупреждением -->
+        <div class="music-warning">
+          <p><strong>Важно:</strong> В треках с пометкой (❗) содержится нецензурная лексика. Прослушивание этих треков рекомендуется только для аудитории 18+.</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Альтернативная Музыка. Все права защищены.</p>
+    </footer>
+  </body>
+</html>

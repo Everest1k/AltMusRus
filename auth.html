@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>АльтМузыка – Вход</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="index.html" class="logo">АльтМузыка</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="artists.html">Исполнители</a></li>
+          <li><a href="reviews.html">Обзоры</a></li>
+          <li><a href="music.html">Музыка</a></li>
+        </ul>
+        <!-- На странице авторизации дополнительная кнопка входа не нужна -->
+        <div class="nav-auth"></div>
+        <div class="burger" id="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="auth-section">
+        <div class="container">
+          <div class="auth-container">
+            <!-- Форма входа -->
+            <div class="auth-form" id="login-section">
+              <h3>Войти</h3>
+              <form id="login-form">
+                <input type="text" placeholder="Имя пользователя" required />
+                <input type="password" placeholder="Пароль" required />
+                <div class="captcha-field">
+                  <label id="captcha-question" for="captcha-input"></label>
+                  <input
+                    type="text"
+                    id="captcha-input"
+                    placeholder="Введите ответ"
+                    required
+                  />
+                </div>
+                <button type="submit">Войти</button>
+              </form>
+              <a href="#" class="switch-link" id="to-register" onclick="switchToRegister(); return false;">Нет аккаунта? Создайте аккаунт</a>
+            </div>
+            <!-- Форма регистрации -->
+            <div class="auth-form" id="register-section" style="display: none;">
+              <h3>Регистрация</h3>
+              <form id="register-form">
+                <input type="text" placeholder="Имя пользователя" required />
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Пароль" required />
+                <div class="captcha-field">
+                  <label id="reg-captcha-question" for="reg-captcha-input"></label>
+                  <input
+                    type="text"
+                    id="reg-captcha-input"
+                    placeholder="Введите ответ"
+                    required
+                  />
+                </div>
+                <button type="submit">Зарегистрироваться</button>
+              </form>
+              <a href="#" class="switch-link" id="to-login" onclick="switchToLogin(); return false;">Уже есть аккаунт? Войти</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Альтернативная Музыка. Все права защищены.</p>
+    </footer>
+  </body>
+</html>
